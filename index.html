@@ -2,6 +2,7 @@
 <html>
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+
       <style>
          <!-- FOR TREE -->
          ul, #myUL {
@@ -45,6 +46,7 @@
          font-size: 20px;
          }
          #myVideo {
+         filter: saturate(8%)  brightness(10%);
          position: fixed;
          right: 0;
          bottom: 0;
@@ -79,6 +81,16 @@
          #myBtn:hover {
          background: #ddd;
          color: black;
+         }
+      </style>
+            <style id="video_effect">
+               #myVideo {
+         filter: saturate(100%)  brightness(100%);
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         min-width: 100%; //100%
+         min-height: 100%;//100%
          }
       </style>
    </head>
@@ -168,7 +180,15 @@
       </script>
       <!--for pages-->
       <script>
+         function video_dark(){
+       document.getElementById("video_effect").innerHTML = 
+"#myVideo {filter: saturate(10%)  brightness(20%);position: fixed;right: 0;bottom: 0;min-width: 100%; //100%min-height: 100%;//100%}"
+       ;
+
+
+         }
          function page_test() {
+               video_dark()
          fetch('https://chili-cheng.github.io/test/h1.html')
          .then(response => response.text())
          .then(data => {
@@ -177,6 +197,7 @@
          document.getElementById("page").innerHTML = data;
          });}
          function page_CVs() {
+               video_dark()
          fetch('https://chili-cheng.github.io/pages/CVs.html')
          .then(response => response.text())
          .then(data => {
@@ -185,6 +206,7 @@
          document.getElementById("page").innerHTML = data;
          });}
          function page_Portfolio() {
+               video_dark()
          fetch('https://chili-cheng.github.io/pages/Portfolio.html')
          .then(response => response.text())
          .then(data => {
@@ -193,6 +215,7 @@
          document.getElementById("page").innerHTML = data;
          });}
                   function page_Research() {
+                        video_dark()
          fetch('https://chili-cheng.github.io/pages/Research.html')
          .then(response => response.text())
          .then(data => {
@@ -201,6 +224,7 @@
          document.getElementById("page").innerHTML = data;
          });}
                   function page_Gallery() {
+                        video_dark()
          fetch('https://chili-cheng.github.io/pages/Gallery.html')
          .then(response => response.text())
          .then(data => {
@@ -209,6 +233,7 @@
          document.getElementById("page").innerHTML = data;
          });}
                            function page_OpenSource() {
+                                 video_dark()
          fetch('https://chili-cheng.github.io/pages/OpenSource.html')
          .then(response => response.text())
          .then(data => {
@@ -217,6 +242,7 @@
          document.getElementById("page").innerHTML = data;
          });}
                                     function page_Contact() {
+                                          video_dark()
          fetch('https://chili-cheng.github.io/pages/Contact.html')
          .then(response => response.text())
          .then(data => {
