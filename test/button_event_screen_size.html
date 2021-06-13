@@ -6,14 +6,25 @@
 
 <button onclick="myFunction()">Try it</button>
 
-<p id="demo"></p>
+<p id="demo">hello~~</p>
 
 <script>
 function myFunction() {
   //screen.width
   var x = "Total Width: " + window.innerWidth + "px";
-  document.getElementById("demo").innerHTML = x;
+  document.getElementById("demo").innerHTML = "<h1>"+x+"</h1>"
+  +"<p>hello world</p>"
+
+  ;
+
 }
+
+fetch('/something.txt')
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+  	console.log(data);
+  });
 </script>
 
 </body>
