@@ -134,8 +134,8 @@
       </div>
       <div class="content">
       <button id="myBtn" onclick="self.location.href='https://chili-cheng.github.io/'">Home</button>
-      <button id="myBtn" onclick="page_test()">Portfolio</button>
-      <button id="myBtn" onclick="myFunction()">CVs</button>
+      <button id="myBtn" onclick="page_Portfolio()">Portfolio</button>
+      <button id="myBtn" onclick="page_CVs()">CVs</button>
       <button id="myBtn" onclick="myFunction()">Research</button>
       <button id="myBtn" onclick="myFunction()">Gallery</button>
       <button id="myBtn" onclick="myFunction()">OpenSource</button>
@@ -173,15 +173,23 @@
          .then(response => response.text())
          .then(data => {
          // Do something with your data
-         console.log(data);
+         //console.log(data);
          document.getElementById("page").innerHTML = data;
          });}
-                  function page_home() {
-         fetch('https://chili-cheng.github.io/pages/home.html')
+         function page_CVs() {
+         fetch('https://chili-cheng.github.io/pages/CVs.html')
          .then(response => response.text())
          .then(data => {
          // Do something with your data
-         console.log(data);
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+         function page_Portfolio() {
+         fetch('https://chili-cheng.github.io/pages/Portfolio.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
          document.getElementById("page").innerHTML = data;
          });}
       </script>
