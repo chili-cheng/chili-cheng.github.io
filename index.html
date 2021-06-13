@@ -136,10 +136,10 @@
       <button id="myBtn" onclick="self.location.href='https://chili-cheng.github.io/'">Home</button>
       <button id="myBtn" onclick="page_Portfolio()">Portfolio</button>
       <button id="myBtn" onclick="page_CVs()">CVs</button>
-      <button id="myBtn" onclick="myFunction()">Research</button>
-      <button id="myBtn" onclick="myFunction()">Gallery</button>
-      <button id="myBtn" onclick="myFunction()">OpenSource</button>
-      <button id="myBtn" onclick="myFunction()">Contact</button>
+      <button id="myBtn" onclick="page_Research()">Research</button>
+      <button id="myBtn" onclick="page_Gallery()">Gallery</button>
+      <button id="myBtn" onclick="page_OpenSource()">OpenSource</button>
+      <button id="myBtn" onclick="page_Contact()">Contact</button>
       </div>
       <script>
          var video = document.getElementById("myVideo");
@@ -186,6 +186,38 @@
          });}
          function page_Portfolio() {
          fetch('https://chili-cheng.github.io/pages/Portfolio.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                  function page_Research() {
+         fetch('https://chili-cheng.github.io/pages/Research.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                  function page_Gallery() {
+         fetch('https://chili-cheng.github.io/pages/Gallery.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                           function page_OpenSource() {
+         fetch('https://chili-cheng.github.io/pages/OpenSource.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                                    function page_Contact() {
+         fetch('https://chili-cheng.github.io/pages/Contact.html')
          .then(response => response.text())
          .then(data => {
          // Do something with your data
