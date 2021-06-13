@@ -68,7 +68,6 @@
          padding: 20px;
          }
          #myBtn {
-               
          width: 12.5%;
          font-size: 20%;
          padding: 2%;
@@ -88,57 +87,12 @@
          <source src="Egg.mp4" type="video/mp4">
          Your browser does not support HTML5 video.
       </video>
-      <div class="main">
-         <h1>Chi Li-Cheng</h1>
-         <p>Chi Li-Cheng is a designer and a researcher</p>
-         <p>His research ranges from architectural design, robotic fabrication to artifical intelligence for design.</p>
-         <br></br>
-         <!-- Repertoire Tree -->
-         <ul id="myUL">
-         <li >
-            <span class="caret">Repertoire</span><!-- 0 -->
-            <br></br>
-            <ul >
-            <!--<ul class="nested">-->
-               <li>
-                  <span class="caret">Design</span>
-                  <ul class="nested">
-                     <li>Architectural Design</li>
-                     <li>Digital Design</li>
-                     <li>Biomimicry Design</li>
-                     
-                  </ul>
-               </li>
-               <li>
-                  <span class="caret">Digital Fabrication</span>
-                  <ul class="nested">
-                     <li>Robotic Arm</li>
-                     <li>3D printing</li>
-                     
-                  </ul>
-               </li>
-               <li>
-                  <span class="caret">Design Tools</span><!-- 0;0 -->
-                  <ul class="nested">
-                     <li>Rhino</li>
-                     <!-- 0;0;0 -->
-                     <li>Grasshopper</li>
-                     <!-- 0;0;1 -->
-                     
-                     <li>
-                        <span class="caret">Machine Learning</span><!-- 0;0;2 -->
-                        <ul class="nested">
-                           <li>Pytorch</li>
-                           </li>
-                        </ul>
-                     </li>
-                  </ul>
-               </li>
-            </ul>
+      <div class="main" id="page">
+         
       </div>
       <div class="content">
-      <button id="myBtn" onclick="myFunction()">Home</button>
-      <button id="myBtn" onclick="myFunction()">Portfolio</button>
+      <button id="myBtn" onclick="page_home()">Home</button>
+      <button id="myBtn" onclick="page_test()">Portfolio</button>
       <button id="myBtn" onclick="myFunction()">CVs</button>
       <button id="myBtn" onclick="myFunction()">Research</button>
       <button id="myBtn" onclick="myFunction()">Gallery</button>
@@ -169,6 +123,25 @@
              this.classList.toggle("caret-down");
            });
          }
+      </script>
+      <!--for pages-->
+      <script>
+         function page_test() {
+         fetch('https://chili-cheng.github.io/test/h1.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+         console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                  function page_home() {
+         fetch('https://chili-cheng.github.io/home.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+         console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
       </script>
    </body>
 </html>

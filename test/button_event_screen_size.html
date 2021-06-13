@@ -7,24 +7,28 @@
 <button onclick="myFunction()">Try it</button>
 
 <p id="demo">hello~~</p>
-
+<h1 id="demo2"></h1>
 <script>
 function myFunction() {
   //screen.width
   var x = "Total Width: " + window.innerWidth + "px";
+  var text="";
   document.getElementById("demo").innerHTML = "<h1>"+x+"</h1>"
   +"<p>hello world</p>"
 
   ;
-
-}
-
-fetch('/something.txt')
+fetch('https://chili-cheng.github.io/test/h1.html')
   .then(response => response.text())
   .then(data => {
   	// Do something with your data
   	console.log(data);
+  	document.getElementById("demo2").innerHTML = data;
   });
+}
+
+
+
+   
 </script>
 
 </body>
